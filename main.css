@@ -13,6 +13,7 @@ body {
   margin: auto;
   box-shadow: 20px 20px 50px #acd200, -30px -30px 60px #00ffff;
   border-radius: 20px 20px;
+  transition: ;
 }
 
 /* question page */
