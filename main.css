@@ -13,7 +13,8 @@ body {
   margin: auto;
   box-shadow: 20px 20px 50px #acd200, -30px -30px 60px #00ffff;
   border-radius: 20px 20px;
-  transition: ;
+  background-image: radial-gradient(whitesmoke, #475569);
+  background-color: #475569;
 }
 
 /* question page */
@@ -26,6 +27,8 @@ img {
 
 .right {
   float: right;
+  margin-top: 20px;
+  border-top: 30px;
   box-shadow: 20px 20px 50px #acd200, -30px -30px 60px #acd200 ;
 }
 
@@ -46,4 +49,16 @@ input[type="radio"] {
   margin-bottom: 50px;
   margin-right: 10px;
 }
-
+button{
+  font-weight: 500;
+  padding: 20px;
+  margin: 30px;
+  background: #ebeef1;
+  border-radius: 50px;
+  color: #00a037;
+  box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+  -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+}
+a{
+  text-decoration: none;
+}
