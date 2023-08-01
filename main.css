@@ -5,60 +5,96 @@ body {
 
 .homepagebg {
   background-image: url("images/bakgrd.jpg");
-  opacity: 2;
+  font-family: 'Roboto Condensed', sans-serif;
+  
 }
+
+.questionbckgr{
+  background-image: url("images/backgr4.jpg");
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+button{
+  font-weight: 500;
+  padding: 20px;
+  margin: 30px;
+  width: 100px;
+  height: 10px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+box-shadow: inset -3px -3px 5px #ffffff,
+            inset 3px 3px 15px #000000;
+}
+
+
 /*opening page */
 .container{
   max-width: 500px;
-  margin: auto;
-  box-shadow: 20px 20px 50px #acd200, -30px -30px 60px #00ffff;
-  border-radius: 20px 20px;
-  background-image: radial-gradient(whitesmoke, #475569);
-  background-color: #475569;
+  height: 70vh;
+  margin: 50px auto;
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: repeat(3, 40px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -3px -3px 5px #ffffff,
+              3px 3px 15px #000000;
+  border-radius: 20px;
+  background: #dde1e7;
+  position: relative;
+}
+.container h1{
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 30px; 
+}
+
+.container h2{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.container h3{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input{
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 5px #000000,
+              inset 3px 3px 15px #ffffff;
 }
 
 /* question page */
-.leftpart {
-  float: left;
-}
-img {
-  margin-top: 100px;
-}
-
-.right {
-  float: right;
-  margin-top: 20px;
-  border-top: 30px;
-  box-shadow: 20px 20px 50px #acd200, -30px -30px 60px #acd200 ;
-}
 
 .nxtprv {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 30rem;
 }
 
-.right2 {
-  float: right;
-  margin-top: -200px;
-  margin-right: 20px;
+.inp{
+margin-top: 200px;
+line-height: 50px;
 }
-input[type="radio"] {
-  transform: scale(1.5);
-  margin-bottom: 50px;
-  margin-right: 10px;
-}
-button{
-  font-weight: 500;
-  padding: 20px;
-  margin: 30px;
-  background: #ebeef1;
-  border-radius: 50px;
-  color: #00a037;
-  box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
-  -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
-}
+
 a{
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  header, footer {
+    font-size: 12px;
+  }
 }

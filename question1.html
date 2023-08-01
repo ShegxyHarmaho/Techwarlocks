@@ -2,28 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body>
-    <main>
-        <!-- left part of the page (background image) -->
-    <div class="leftpart">
-        <img src="images/backgr5.jpg" alt="pics" width="500px" height="390px">
-    </div>
-     
-    
+<body class="questionbckgr">
+
+   
     <!-- right part of the page(questions) -->
-    <div class="right">
-    <h1> Which of the following is not a programming language?</h1>
-    <div>
-    <input type="radio" id="Python" name="fav_language" value="Python">
+    <!-- <div class="container">
+    
+    <h1> Which of the following is not a programming language?
+
+    </h1>
+
+        <div class="">
+            <input type="radio" id="Python" name="fav_language" value="Python">
                 <label for="Python">Python</label><br>
                 <input type="radio" id="Canva" name="fav_language" value="Canva">
                 <label for="Canva">Canva</label><br>
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
                 <label for="javascript">JavaScript</label><br>
-            </div>
+        </div>
+    
             <div class="right2">
                <input type="radio" id="PHP" name="fav_language" value="PHP">
                 <label for="PHP">PHP</label><br>
@@ -38,9 +41,36 @@
                 <a class="" href="question1.html">NEXT</a>  
             </button>
         </div>
-        </div>
-    </main>
-    
+        </div> -->
+        <div class="container">
+           <section>
+            <h1> Which of the following is not a programming language?
+            </h1>
+           </section> 
 
+            <section>
+                <div class="inp">
+                    <input type="radio" id="Python" name="fav_language" value="Python">
+                        <label for="Python">Python</label><br>
+                        <input type="radio" id="Canva" name="fav_language" value="Canva">
+                        <label for="Canva">Canva</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label><br>
+                    <input type="radio" id="PHP" name="fav_language" value="PHP">
+                     <label for="PHP">PHP</label><br>
+                     <input type="radio" id="JAVA" name="fav_language" value="JAVA">
+                     <label for="JAVA">JAVA</label><br>
+                 </div>
+            </section>
+
+             <div class="nxtprv">
+                <button>
+                       <a class="" href="index.html">PREVIOUS</a>  
+                </button>
+                   <button >
+                       <a class="" href="question1.html">NEXT</a>  
+                   </button>
+               </div>
+        </div>
 </body>
 </html>
