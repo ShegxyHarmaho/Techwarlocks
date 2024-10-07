@@ -5,32 +5,30 @@ body {
 
 .homepagebg {
   background-image: url("images/bakgrd.jpg");
-  font-family: 'Roboto Condensed', sans-serif;
-  
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.questionbckgr{
+.questionbckgr {
   background-image: url("images/backgr4.jpg");
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-
-button{
+button {
   font-weight: 500;
-  padding: 20px;
-  margin: 30px;
+  padding: 10px;
+  margin-left: 90px;
   width: 100px;
-  height: 10px;
+  height: 30px;
+  text-align: center;
   position: relative;
+  top: 200px;
   background: #ffffff;
   border-radius: 20px;
-box-shadow: inset -3px -3px 5px #ffffff,
-            inset 3px 3px 15px #000000;
+  box-shadow: inset -3px -3px 5px #ffffff, inset 3px 3px 15px #000000;
 }
 
-
 /*opening page */
-.container{
+.container {
   max-width: 500px;
   height: 70vh;
   margin: 50px auto;
@@ -40,33 +38,41 @@ box-shadow: inset -3px -3px 5px #ffffff,
   gap: 20px;
   justify-content: center;
   align-items: center;
-  box-shadow: -3px -3px 5px #ffffff,
-              3px 3px 15px #000000;
+  box-shadow: -3px -3px 5px #ffffff, 3px 3px 15px #000000;
   border-radius: 20px;
   background: #dde1e7;
   position: relative;
 }
-.container h1{
-  font-size: 13px;
+
+.sec1 {
+  position: relative;
+  top: 10px;
+  
+}
+.sec2 {
+ margin-top: 100px;
+  
+}
+.container h1 {
+  font-size: 23px;
   font-weight: bold;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
-.container h2{
+.container h2 {
   font-size: 13px;
   font-weight: bold;
 }
 
-.container h3{
+.container h3 {
   font-size: 13px;
   font-weight: bold;
 }
 
-input{
+input {
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: inset -2px -2px 5px #000000,
-              inset 3px 3px 15px #ffffff;
+  box-shadow: inset -2px -2px 5px #000000, inset 3px 3px 15px #ffffff;
 }
 
 /* question page */
@@ -75,15 +81,16 @@ input{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 30rem;
+  /* margin-top: 30rem; */
+  margin-right: 90px;
 }
 
-.inp{
-margin-top: 200px;
-line-height: 50px;
+.inp {
+  margin-top: 200px;
+  line-height: 50px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -94,7 +101,8 @@ a{
 }
 
 @media (max-width: 576px) {
-  header, footer {
+  header,
+  footer {
     font-size: 12px;
   }
 }

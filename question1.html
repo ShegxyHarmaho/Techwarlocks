@@ -1,77 +1,61 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Question 1</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
 </head>
 <body class="questionbckgr">
+    <section class="container">
+        <div class="sec1">
+            <h2>Question 1:</h2>
+            <p>Which of the following is not a programming language?</p>
+        </div>
 
-   
-    <!-- right part of the page(questions) -->
-    <!-- <div class="container">
-    
-    <h1> Which of the following is not a programming language?
-
-    </h1>
-
-        <div class="">
-            <input type="radio" id="Python" name="fav_language" value="Python">
+        <div class="sec2">
+            <form id="quiz-form">
+                <input type="radio" id="Python" name="question1" value="Python">
                 <label for="Python">Python</label><br>
-                <input type="radio" id="Canva" name="fav_language" value="Canva">
+                
+                <input type="radio" id="Canva" name="question1" value="Canva">
                 <label for="Canva">Canva</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="javascript">JavaScript</label><br>
-        </div>
-    
-            <div class="right2">
-               <input type="radio" id="PHP" name="fav_language" value="PHP">
+                
+                <input type="radio" id="JavaScript" name="question1" value="JavaScript">
+                <label for="JavaScript">JavaScript</label><br>
+                
+                <input type="radio" id="PHP" name="question1" value="PHP">
                 <label for="PHP">PHP</label><br>
-                <input type="radio" id="JAVA" name="fav_language" value="JAVA">
-                <label for="JAVA">JAVA</label><br></span>
-            </div>
-    <div class="nxtprv">
-         <button>
-                <a class="" href="index.html">PREVIOUS</a>  
-         </button>
-            <button >
-                <a class="" href="question1.html">NEXT</a>  
-            </button>
+                
+                <input type="radio" id="JAVA" name="question1" value="JAVA">
+                <label for="JAVA">JAVA</label><br>
+            </form>
         </div>
-        </div> -->
-        <div class="container">
-           <section>
-            <h1> Which of the following is not a programming language?
-            </h1>
-           </section> 
 
-            <section>
-                <div class="inp">
-                    <input type="radio" id="Python" class="input" value="Python">
-                        <label for="Python">Python</label><br>
-                        <input type="radio" id="Canva" class="input" value="Canva">
-                        <label for="Canva">Canva</label><br>
-                        <input type="radio" id="javascript" class="input" value="JavaScript">
-                        <label for="javascript">JavaScript</label><br>
-                    <input type="radio" id="PHP" class="input" value="PHP">
-                     <label for="PHP">PHP</label><br>
-                     <input type="radio" id="JAVA" class="input" value="JAVA">
-                     <label for="JAVA">JAVA</label><br>
-                 </div>
-            </section>
-
-             <div class="nxtprv">
-                <button>
-                       <a class="" href="index.html">PREVIOUS</a>  
-                </button>
-                   <button >
-                       <a class="" href="question1.html">NEXT</a>  
-                   </button>
-               </div>
+        <div class="nxtprv">
+            <button id="next">Next</button>
         </div>
-        <script src="main.js"></script>
+    </section>
+
+    <script>
+        document.getElementById('next').addEventListener('click', function() {
+            const form = document.getElementById('quiz-form');
+            const selected = form.question1.value;
+
+            if (!selected) {
+                alert('Please select an answer before proceeding.');
+                return;
+            }
+
+            // Store the answer in sessionStorage
+            sessionStorage.setItem('question1', selected);
+
+            // Navigate to the next question
+            window.location.href = 'question2.html';
+        });
+    </script>
 </body>
 </html>

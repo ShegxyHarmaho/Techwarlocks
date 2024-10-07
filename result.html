@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="questionbckgr">
+    <div class="container">
+        <h1>Your Quiz Results</h1>
+        <div id="result"></div>
+        <button id="restart">Restart Quiz</button>
+    </div>
+
+    <script>
+        // Define the correct answers
+        const correctAnswers = {
+            question1: 'Canva',
+            question2: 'HyperTextMarkupLanguage'
+        };
+
+        // Retrieve user answers from sessionStorage
+        const userAnswers = {
+            question1: sessionStorage.getItem('question1'),
+            question2: sessionStorage.getItem('question2')
+        };
+
+        // Calculate the score
+        let score = 0;
+        const total = Object.keys(correctAnswers).length;
+
+        for (let key in correctAnswers) {
+            if (userAnswers[key] === correctAnswers[key]) {
+                score++;
+            }
+        }
+
+        // Display the result
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+            <p>You answered ${score} out of ${total} questions correctly.</p>
+            <p>Your score: ${(score / total) * 100}%</p>
+        `;
+
+        // Restart Quiz button functionality
+        document.getElementById('restart').addEventListener('click', function() {
+            sessionStorage.clear();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

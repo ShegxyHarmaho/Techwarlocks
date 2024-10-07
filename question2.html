@@ -1,77 +1,103 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
-</head>
-<body class="questionbckgr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="questionbckgr">
+    <section class="container">
+      <div class="sec1">
+        <h2>Question 2:</h2>
+        <p>What does HTML stand for?</p>
+      </div>
 
-   
-    <!-- right part of the page(questions) -->
-    <!-- <div class="container">
-    
-    <h1> Which of the following is not a programming language?
+      <div class="sec2">
+        <form id="quiz-form">
+          <input
+            type="radio"
+            id="HyperTextMarkupLanguage"
+            name="question2"
+            value="HyperTextMarkupLanguage"
+          />
+          <label for="HyperTextMarkupLanguage">HyperText Markup Language</label
+          ><br />
 
-    </h1>
+          <input
+            type="radio"
+            id="HomeToolMarkingLanguage"
+            name="question2"
+            value="HomeToolMarkingLanguage"
+          />
+          <label for="HomeToolMarkingLanguage">Home Tool Marking Language</label
+          ><br />
 
-        <div class="">
-            <input type="radio" id="Python" name="fav_language" value="Python">
-                <label for="Python">Python</label><br>
-                <input type="radio" id="Canva" name="fav_language" value="Canva">
-                <label for="Canva">Canva</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="javascript">JavaScript</label><br>
-        </div>
-    
-            <div class="right2">
-               <input type="radio" id="PHP" name="fav_language" value="PHP">
-                <label for="PHP">PHP</label><br>
-                <input type="radio" id="JAVA" name="fav_language" value="JAVA">
-                <label for="JAVA">JAVA</label><br></span>
-            </div>
-    <div class="nxtprv">
-         <button>
-                <a class="" href="index.html">PREVIOUS</a>  
-         </button>
-            <button >
-                <a class="" href="question1.html">NEXT</a>  
-            </button>
-        </div>
-        </div> -->
-        <div class="container">
-           <section>
-            <h1> Which of these is not an example of a tags in html?
-            </h1>
-           </section> 
+          <input
+            type="radio"
+            id="HyperTextMachineLanguage"
+            name="question2"
+            value="HyperTextMachineLanguage"
+          />
+          <label for="HyperTextMachineLanguage"
+            >HyperText Machine Language</label
+          ><br />
 
-            <section>
-                <div class="inp">
-                    <input type="radio" id="Python" name="fav_language" value="Python">
-                        <label for="Python">hmtl</label><br>
-                        <input type="radio" id="Canva" name="fav_language" value="Canva">
-                        <label for="Canva">head</label><br>
-                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">body</label><br>
-                    <input type="radio" id="PHP" name="fav_language" value="PHP">
-                     <label for="PHP">title</label><br>
-                     <input type="radio" id="JAVA" name="fav_language" value="JAVA">
-                     <label for="JAVA">H2</label><br>
-                 </div>
-            </section>
+          <input
+            type="radio"
+            id="HyperTextMarkupLoop"
+            name="question2"
+            value="HyperTextMarkupLoop"
+          />
+          <label for="HyperTextMarkupLoop">HyperText Markup Loop</label><br />
+        </form>
+      </div>
 
-             <div class="nxtprv">
-                <button>
-                       <a class="" href="index.html">PREVIOUS</a>  
-                </button>
-                   <button >
-                       <a class="" href="question1.html">NEXT</a>  
-                   </button>
-               </div>
-        </div>
-        <script src="main.js"></script>
-</body>
+      <div class="nxtprv">
+        <button id="previous">Previous</button>
+        <button id="submit">Submit</button>
+      </div>
+    </section>
+
+    <script>
+      // Pre-fill the form if the answer was previously selected
+      window.onload = function () {
+        const savedAnswer = sessionStorage.getItem("question2");
+        if (savedAnswer) {
+          document.querySelector(
+            `input[name="question2"][value="${savedAnswer}"]`
+          ).checked = true;
+        }
+      };
+
+      document
+        .getElementById("previous")
+        .addEventListener("click", function () {
+          // Navigate back to the previous question
+          window.location.href = "question1.html";
+        });
+
+      document.getElementById("submit").addEventListener("click", function () {
+        const form = document.getElementById("quiz-form");
+        const selected = form.question2.value;
+
+        if (!selected) {
+          alert("Please select an answer before submitting.");
+          return;
+        }
+
+        // Store the answer in sessionStorage
+        sessionStorage.setItem("question2", selected);
+
+        // Navigate to the result page
+        window.location.href = "result.html";
+      });
+    </script>
+  </body>
 </html>
